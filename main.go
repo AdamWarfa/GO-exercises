@@ -28,5 +28,10 @@ func main() {
 	// fmt.Println("Even Numbers:", even)
 	// fmt.Println("Odd Numbers:", odd)
 
-	exercises.RoutineTest()
+	// exercises.RoutineTest()
+
+	nums := []int{2, 7, 11, 15}
+	target := 9
+
+	exercises.TwoSum(nums, target)
 }
