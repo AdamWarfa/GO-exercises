@@ -1,6 +1,10 @@
 package main
 
-import "GO-exercises/exercises"
+import (
+	"GO-exercises/exercises"
+	"fmt"
+	"sort"
+)
 
 func main() {
 	// //ex 1
@@ -30,8 +34,39 @@ func main() {
 
 	// exercises.RoutineTest()
 
-	nums := []int{2, 7, 11, 15}
-	target := 9
+	// nums := []int{2, 7, 11, 15}
+	// target := 9
 
-	exercises.TwoSum(nums, target)
+	// exercises.TwoSum(nums, target)
+
+	harry := exercises.Student{
+		Name: "Harry",
+		Age:  10,
+	}
+
+	ron := exercises.Student{
+		Name: "Ron",
+		Age:  10,
+	}
+
+	draco := exercises.Student{
+		Name: "Draco",
+		Age:  10,
+	}
+
+	harry.SetAge(18)
+	ron.SetAge(19)
+	draco.SetAge(69)
+
+	studentList := []exercises.Student{harry, ron}
+	fmt.Println(studentList)
+
+	studentList = append(studentList, draco)
+	fmt.Println(studentList)
+
+	sort.Slice(studentList, func(a, b int) bool {
+		return studentList[a].Age > studentList[b].Age
+	})
+
+	fmt.Println(studentList)
 }
