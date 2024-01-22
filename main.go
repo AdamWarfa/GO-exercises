@@ -97,10 +97,5 @@ func main() {
 	kata.Solution("", "")
 	kata.Solution(" ", "")
 	kata.Solution("abc", "c")
-	// kata.Solution("", "")
-	// kata.Solution("", "")
-	// kata.Solution("", "")
-	// kata.Solution("", "")
-	// kata.Solution("", "")
-	// kata.Solution("", "")
+
 }
