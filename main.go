@@ -93,4 +93,14 @@ func main() {
 	kata.Solve("aaaa")
 	kata.Solve("aa")
 	kata.Solve("a")
+
+	kata.Solution("", "")
+	kata.Solution(" ", "")
+	kata.Solution("abc", "c")
+	// kata.Solution("", "")
+	// kata.Solution("", "")
+	// kata.Solution("", "")
+	// kata.Solution("", "")
+	// kata.Solution("", "")
+	// kata.Solution("", "")
 }
