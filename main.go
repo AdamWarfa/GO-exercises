@@ -45,6 +45,19 @@ func main() {
 		Age:  10,
 	}
 
+	numberList := []int{1, 2, 3, 4}
+
+	numberList = append(numberList, 5)
+
+	for _, num := range numberList {
+		fmt.Println(num)
+	}
+
+	name := "john"
+	name = "mary"
+	fmt.Println(name)
+	fmt.Println(numberList)
+
 	ron := exercises.Student{
 		Name: "Ron",
 		Age:  10,
