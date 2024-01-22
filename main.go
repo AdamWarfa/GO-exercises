@@ -1,6 +1,7 @@
 package main
 
 import (
+	kata "GO-exercises/codeWars"
 	"GO-exercises/exercises"
 	"fmt"
 	"sort"
@@ -69,4 +70,14 @@ func main() {
 	})
 
 	fmt.Println(studentList)
+
+	s := "aaabbbbhaijjjm"
+	kata.PrinterError(s)
+
+	kata.Solve("abcd")
+	kata.Solve("abcda")
+	kata.Solve("abcdabc")
+	kata.Solve("aaaa")
+	kata.Solve("aa")
+	kata.Solve("a")
 }
