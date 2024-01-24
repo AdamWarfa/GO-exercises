@@ -7,42 +7,68 @@ import (
 	"sort"
 )
 
+func fourExercises() {
+	//ex 1
+	numbers1 := []int{5, 10, 15, 20, 25}
+	average := exercises.CalculateAverage(numbers1)
+
+	fmt.Println("Average:", average)
+
+	//ex 2
+	numbers2 := []int{1, 2, 3, 2, 4, 5, 6, 4}
+	unique := exercises.UniqueElements(numbers2)
+
+	fmt.Println("Unique Elements:", unique)
+
+	//ex 3
+	inputStr := "Hello, World!"
+	reversed := exercises.ReverseString(inputStr)
+
+	fmt.Println("Reversed String:", reversed)
+
+	//ex 4
+	numbers3 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	even, odd := exercises.SeparateEvenOdd(numbers3)
+
+	fmt.Println("Even Numbers:", even)
+	fmt.Println("Odd Numbers:", odd)
+
+	exercises.RoutineTest()
+
+	nums := []int{2, 7, 11, 15}
+	target := 9
+
+	exercises.TwoSum(nums, target)
+}
+
+func CallCodeWars() {
+	s := "aaabbbbhaijjjm"
+	kata.PrinterError(s)
+
+	kata.Solve("abcd")
+	kata.Solve("abcda")
+	kata.Solve("abcdabc")
+	kata.Solve("aaaa")
+	kata.Solve("aa")
+	kata.Solve("a")
+
+	kata.Solution("", "")
+	kata.Solution(" ", "")
+	kata.Solution("abc", "c")
+
+}
+
 func main() {
-	// //ex 1
-	// numbers1 := []int{5, 10, 15, 20, 25}
-	// average := exercises.CalculateAverage(numbers1)
 
-	// fmt.Println("Average:", average)
+	// fourExercises()
 
-	// //ex 2
-	// numbers2 := []int{1, 2, 3, 2, 4, 5, 6, 4}
-	// unique := exercises.UniqueElements(numbers2)
-
-	// fmt.Println("Unique Elements:", unique)
-
-	// //ex 3
-	// inputStr := "Hello, World!"
-	// reversed := exercises.ReverseString(inputStr)
-
-	// fmt.Println("Reversed String:", reversed)
-
-	// //ex 4
-	// numbers3 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	// even, odd := exercises.SeparateEvenOdd(numbers3)
-
-	// fmt.Println("Even Numbers:", even)
-	// fmt.Println("Odd Numbers:", odd)
-
-	// exercises.RoutineTest()
-
-	// nums := []int{2, 7, 11, 15}
-	// target := 9
-
-	// exercises.TwoSum(nums, target)
+	// CallCodeWars()
 
 	harry := exercises.Student{
-		Name: "Harry",
-		Age:  10,
+		Name:  "Harry",
+		Age:   10,
+		House: "Gry",
+		Color: "Black",
 	}
 
 	numberList := []int{1, 2, 3, 4}
@@ -59,19 +85,20 @@ func main() {
 	fmt.Println(numberList)
 
 	ron := exercises.Student{
-		Name: "Ron",
-		Age:  10,
+		Name:  "Ron",
+		Age:   10,
+		House: "Gry",
 	}
 
 	draco := exercises.Student{
-		Name: "Draco",
-		Age:  10,
+		Name:  "Draco",
+		Age:   10,
+		House: "Sly",
 	}
 
 	harry.SetAge(18)
 	ron.SetAge(19)
 	draco.SetAge(69)
-
 	studentList := []exercises.Student{harry, ron}
 	fmt.Println(studentList)
 
@@ -82,20 +109,16 @@ func main() {
 		return studentList[a].Age > studentList[b].Age
 	})
 
+	// for _, student := range studentList {
+	// 	student.Color = student.SetColor()
+	// }
+
+	for i := 0; i < len(studentList); i++ {
+		studentList[i].Color = studentList[i].SetColor()
+	}
+
 	fmt.Println(studentList)
 
-	s := "aaabbbbhaijjjm"
-	kata.PrinterError(s)
-
-	kata.Solve("abcd")
-	kata.Solve("abcda")
-	kata.Solve("abcdabc")
-	kata.Solve("aaaa")
-	kata.Solve("aa")
-	kata.Solve("a")
-
-	kata.Solution("", "")
-	kata.Solution(" ", "")
-	kata.Solution("abc", "c")
+	// foundSly := studentList[slices.Index(studentList, draco)]
 
 }

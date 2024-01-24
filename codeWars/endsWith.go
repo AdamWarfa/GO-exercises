@@ -10,6 +10,7 @@ func Solution(str, ending string) bool {
 		return str[len(str)-len(ending):] == ending
 	} else {
 		fmt.Println(false)
+
 		return false
 	}
 }
