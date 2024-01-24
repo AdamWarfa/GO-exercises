@@ -4,7 +4,6 @@ import (
 	kata "GO-exercises/codeWars"
 	"GO-exercises/exercises"
 	"fmt"
-	"sort"
 )
 
 func fourExercises() {
@@ -64,61 +63,11 @@ func main() {
 
 	// CallCodeWars()
 
-	harry := exercises.Student{
-		Name:  "Harry",
-		Age:   10,
-		House: "Gry",
-		Color: "Black",
-	}
+	// exercises.TestStudents()
 
-	numberList := []int{1, 2, 3, 4}
+	// MinStack := exercises.Constructor()
+	// MinStack.TestMinStack()
 
-	numberList = append(numberList, 5)
-
-	for _, num := range numberList {
-		fmt.Println(num)
-	}
-
-	name := "john"
-	name = "mary"
-	fmt.Println(name)
-	fmt.Println(numberList)
-
-	ron := exercises.Student{
-		Name:  "Ron",
-		Age:   10,
-		House: "Gry",
-	}
-
-	draco := exercises.Student{
-		Name:  "Draco",
-		Age:   10,
-		House: "Sly",
-	}
-
-	harry.SetAge(18)
-	ron.SetAge(19)
-	draco.SetAge(69)
-	studentList := []exercises.Student{harry, ron}
-	fmt.Println(studentList)
-
-	studentList = append(studentList, draco)
-	fmt.Println(studentList)
-
-	sort.Slice(studentList, func(a, b int) bool {
-		return studentList[a].Age > studentList[b].Age
-	})
-
-	// for _, student := range studentList {
-	// 	student.Color = student.SetColor()
-	// }
-
-	for i := 0; i < len(studentList); i++ {
-		studentList[i].Color = studentList[i].SetColor()
-	}
-
-	fmt.Println(studentList)
-
-	// foundSly := studentList[slices.Index(studentList, draco)]
+	exercises.TestTemps()
 
 }
