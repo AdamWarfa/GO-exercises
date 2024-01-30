@@ -70,4 +70,6 @@ func main() {
 
 	exercises.TestTemps()
 
+	exercises.TestLongestSubstring()
+
 }
