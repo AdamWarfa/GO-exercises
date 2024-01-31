@@ -37,7 +37,11 @@ func FromScratch() {
 func doubleLetters(list []int) []int {
 	doubleList := []int{}
 	for i := 0; i < len(list); i++ {
-		doubleList = append(doubleList, list[i]*2)
+		if i < 3 {
+			doubleList = append(doubleList, list[i]*2)
+		} else {
+			doubleList = append(doubleList, list[i])
+		}
 	}
 	return doubleList
 }
