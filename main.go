@@ -68,8 +68,10 @@ func main() {
 	// MinStack := exercises.Constructor()
 	// MinStack.TestMinStack()
 
-	exercises.TestTemps()
+	// exercises.TestTemps()
 
-	exercises.TestLongestSubstring()
+	// exercises.TestLongestSubstring()
+
+	exercises.FromScratch()
 
 }
