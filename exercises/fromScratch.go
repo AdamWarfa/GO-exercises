@@ -30,11 +30,32 @@ func FromScratch() {
 	}
 	fmt.Println(doubleList)
 
-	newList := doubleLetters(numberList)
+	// function creation
+
+	//error handling
+	errorList := []int{1, 2}
+
+	newList, err := doubleLetters(numberList)
+	wrongList, err := doubleLetters(errorList)
+
+	if err != nil {
+		fmt.Println(err)
+	}
 	fmt.Println(newList)
+	fmt.Println(wrongList)
 }
 
-func doubleLetters(list []int) []int {
+func doubleLetters(list []int) ([]int, error) {
+
+	// move slice and loop
+	// if else
+	//return multiple
+
+	if len(list) < 3 {
+		err := fmt.Errorf("list must be at least 3 items long")
+		return []int{}, err
+	}
+
 	doubleList := []int{}
 	for i := 0; i < len(list); i++ {
 		if i < 3 {
@@ -43,5 +64,5 @@ func doubleLetters(list []int) []int {
 			doubleList = append(doubleList, list[i])
 		}
 	}
-	return doubleList
+	return doubleList, nil
 }
