@@ -4,6 +4,8 @@ import (
 	kata "GO-exercises/codeWars"
 	"GO-exercises/exercises"
 	"fmt"
+
+	"golang.org/x/exp/constraints"
 )
 
 func fourExercises() {
@@ -72,6 +74,20 @@ func main() {
 
 	// exercises.TestLongestSubstring()
 
-	exercises.FromScratch()
+	// exercises.FromScratch()
 
+}
+
+func TestAdd() {
+	fmt.Println(Add(1, 2))
+	fmt.Println(Add(1.1, 2.2))
+	fmt.Println(Add("a", "b"))
+	fmt.Println(Add(1, 2.2))
+}
+
+func Add[T constraints.Ordered](a T, b T) T {
+	tyoeOfA := fmt.Sprintf("%T", a)
+	tyoeOfB := fmt.Sprintf("%T", b)
+	fmt.Println(tyoeOfA, tyoeOfB)
+	return a + b
 }
